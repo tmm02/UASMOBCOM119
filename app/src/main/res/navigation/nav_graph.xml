@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.ui.home.HomeFragment"
+        android:label="Home - M Tamam S A 1313620024"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.myapplication.ui.edit.EditFragment"
+        android:label="Edit"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/tambahBukuFragment"
+        android:name="com.example.myapplication.ui.add.TambahBukuFragment"
+        android:label="Tambah Buku"
+        tools:layout="@layout/fragment_tambah_buku" />
+
+    <action
+        android:id="@+id/action_homeFragment_to_editFragment"
+        app:destination="@id/editFragment" />
+    <action
+        android:id="@+id/action_homeFragment_to_tambahBukuFragment"
+        app:destination="@id/tambahBukuFragment" />
+    <action
+        android:id="@+id/action_tambahBukuFragment_to_homeFragment"
+        app:destination="@id/homeFragment" />
+
+<!--    <argument-->
+<!--        android:name="bukuId"-->
+<!--        app:argType="long"-->
+<!--         />-->
+
+</navigation>

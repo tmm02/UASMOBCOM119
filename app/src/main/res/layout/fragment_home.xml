@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- Add a variable for the ViewModel if needed -->
+        <!-- <variable
+            name="viewModel"
+            type="com.example.myapplication.ui.home.HomeViewModel" /> -->
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- RecyclerView for displaying the list of books -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_buku"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- FloatingActionButton for navigating to CreateFragment -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_add"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                app:layout_anchor="@id/recyclerView"
+                app:layout_anchorGravity="bottom|end" />
+
+            <!-- TextView for displaying a message when there is no data -->
+            <TextView
+                android:id="@+id/noDataTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak ada data buku"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

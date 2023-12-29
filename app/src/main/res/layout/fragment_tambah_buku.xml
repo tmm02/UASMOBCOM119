@@ -1,0 +1,45 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.myapplication.ui.add.TambahBukuViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".ui.TambahBukuFragment">
+
+        <!-- Add your UI components here -->
+        <EditText
+            android:id="@+id/editJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Judul" />
+
+        <EditText
+            android:id="@+id/editPenulis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Penulis" />
+
+        <CheckBox
+            android:id="@+id/checkboxTersedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tersedia" />
+
+        <Button
+            android:id="@+id/btnAddBuku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Buku" />
+
+    </LinearLayout>
+</layout>
